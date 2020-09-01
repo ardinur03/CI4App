@@ -3,11 +3,11 @@
   <div class="container">
     <div class="socials-media text-center">
       <ul class="list-unstyled">
-        <li><a href="https://web.facebook.com/ardinurinsan03" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="https://web.facebook.com/ardinurinsan03" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Github"><i class="fab fa-github"></i></a></li>
+        <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="YouTube"><i class="fab fa-youtube"></i></a></li>
       </ul>
     </div>
     <p>&copy; Copyright <script>
