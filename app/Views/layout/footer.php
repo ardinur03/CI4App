@@ -14,7 +14,7 @@
         document.write(new Date().getFullYear());
       </script> <i class="fas fa-heart"></i></p>
     <div class="credits" style="color: white;">
-      Designed by <a href="#">ardinur_03</a>
+      Designed by <a href="https://www.ardinur03.ga" target="_blank">ardinur_03</a>
     </div>
   </div>
 </footer>
