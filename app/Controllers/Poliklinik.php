@@ -22,6 +22,7 @@ class Poliklinik extends BaseController
   {
     $data = [
       'title' => 'Poliklinik',
+      'methodName' => '/poliklinik',
       'pasien' => $this->poliklinik->getPasien()
   ];
     return view('pages/poliklinik/v_poliklinik', $data);
@@ -32,6 +33,7 @@ class Poliklinik extends BaseController
   {
     $data = [
       'title' => 'Detail Pasien',
+      'methodName' => '/poliklinik',
       'pasien' => $this->poliklinik->getPasien($id)
     ];
 
@@ -64,6 +66,7 @@ class Poliklinik extends BaseController
     // session(); ==>Bisa langsung disini atau bisa juga di basecontrollernya
     $data = [
       'title'=>'Create Pasien',
+      'methodName' => '/poliklinik',
       'validation' => \Config\Services::validation()
     ];
 
@@ -185,6 +188,7 @@ class Poliklinik extends BaseController
     $data = [
       'title' => 'Update Pasien',
       'pasien' => $this->poliklinik->getPasien($id),
+      'methodName' => '/poliklinik',
       'validation' => \Config\Services::validation()
     ];
     // Mengirim data ke dalam view
