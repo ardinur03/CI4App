@@ -178,69 +178,61 @@ body {
 /* SECTION SOSIAL MEDIA AKHIR IN ABOUT*/
 
 /* CSS view Contact start */
-.contact-section {
+#contact-section {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .contact-info {
-  color: #fff;
+  color: #000;
   max-width: 500px;
   line-height: 65px;
   padding-left: 50px;
-  font-size: 18px;
+  font-size: 15px;
 }
-
 .contact-info i {
   margin-right: 20px;
-  font-size: 25px;
+  font-size: 20px;
 }
-
 .contact-form {
   max-width: 700px;
   margin-right: 50px;
 }
-
 .contact-info,
 .contact-form {
   flex: 1;
 }
-
 .contact-form h2 {
-  color: #fff;
+  color: #000;
   text-align: center;
   font-size: 35px;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-
 .contact-form .text-box {
-  background: #000;
+  background: #1DA0F0;
   color: #fff;
   border: none;
   width: calc(50% - 10px);
   height: 50px;
   padding: 12px;
-  font-size: 15px;
+  font-size: 13px;
   border-radius: 5px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   opacity: 0.9;
 }
-
 .contact-form .text-box:first-child {
   margin-right: 15px;
 }
-
 .contact-form textarea {
-  background: #000;
+  background: #1DA0F0;
   color: #fff;
   border: none;
   width: 100%;
   padding: 12px;
-  font-size: 15px;
+  font-size: 13px;
   min-height: 200px;
   max-height: 400px;
   resize: vertical;
@@ -249,7 +241,6 @@ body {
   margin-bottom: 20px;
   opacity: 0.9;
 }
-
 .contact-form .send-btn {
   float: right;
   background: #2E94E3;
@@ -257,7 +248,7 @@ body {
   border: none;
   width: 120px;
   height: 40px;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -266,11 +257,12 @@ body {
   transition: 0.3s;
   transition-property: background;
 }
-
 .contact-form .send-btn:hover {
   background: #0582E3;
 }
-
+#contact-section .container p {
+  display: inline;
+}
 @media screen and (max-width: 950px) {
   .contact-section {
     flex-direction: column;
@@ -282,15 +274,76 @@ body {
   }
 
   .contact-form h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .contact-form .text-box {
     width: 100%;
   }
 }
-
 /* CSS view Contact end */
+
+/*Footer CSS Start*/
+#footer {
+  background: #000000;
+  ;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#footer .socials-media {
+  width: 100%;
+}
+#footer .socials-media ul {
+  display: inline-block;
+  float: none;
+  margin: 0 0 10px 0;
+}
+#footer .socials-media ul li {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#footer .socials-media ul li a {
+  font-size: 18px;
+  color: #999;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  background: transparent;
+  text-transform: uppercase;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+#footer .socials-media ul li a:hover {
+  color: #fafafa;
+  font-size: 25px;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+#footer p {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin-top: 0;
+  text-transform: uppercase;
+  color: white;
+}
+#footer .container .credits a {
+  text-decoration: none;
+  color: #fafafa;
+}
+#footer .container .credits {
+  font-size: 10px;
+}
+#footer .container .credits a:hover {
+  text-decoration: none;
+  color: #0307b6;
+}
 
 /* GLOBAL VIEW AKHIR */
 
@@ -304,17 +357,29 @@ body {
   /* NAVBAR AWAL TAMPLATE*/
   .nav-bar,
   .nav-link {
-    color: #fafafa !important;
+    /* color: #fafafa !important; */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     font-family: 'Nunito Sans', sans-serif;
     /* padding-right: 80px; */
   }
-  
   .navbar-atas {
     left: 30px;
     right: 30px;
   }
-
+  .nav-link {
+    margin-right: 5px;
+  }
+  .active {
+    color: #ffffff4b;
+  }
+  .present {
+    content: '-';
+    border-bottom: 3px solid #ffffff4b;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
   .navbar .nama{
     font-family: 'Nunito Sans', sans-serif;
     color: white;
@@ -547,7 +612,7 @@ body {
   }
   #footer .socials-media ul li a:hover {
     color: #fafafa;
-    font-size: 30px;
+    font-size: 35px;
     -moz-transition: all 0.5s ease-in-out 0s;
     -ms-transition: all 0.5s ease-in-out 0s;
     -o-transition: all 0.5s ease-in-out 0s;
@@ -562,6 +627,9 @@ body {
     text-transform: uppercase;
     color: white;
   }
+  #footer .container .credits {
+    font-size: 15px;
+  }
   #footer .container .credits a {
     text-decoration:none;
     color: #fafafa;
@@ -571,44 +639,23 @@ body {
     color: #0307b6;
   }
 
-  /* Poliklinik CRUD */
-  #table-section {
-    padding-top: 55px;
-  }
-  #create-pasien {
-    padding-top: 35px;
-  }
-  #table-section .container thead {
-    background-color: #0f8fdd;
-    font-size: 16px;
-  }
-  #table-section .container tbody {
-    font-size: 15px;
-  }
-  .table>thead>tr>th {
-    vertical-align: middle;
-    text-align: center;
-  }
-  #create-pasien .container {
-    width:  500px;
-  }
-  #detail-messages {
-    padding-top: 90px;
-  }
-
   /* CSS view Contact start */
-  .contact-section {
+  /* contact start */
+  #contact-section {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .contact-info {
-    color: #fff;
+    color: #000;
     max-width: 500px;
     line-height: 65px;
     padding-left: 50px;
     font-size: 18px;
+  }
+  #contact-section .container p {
+    display: inline;
   }
   .contact-info i {
     margin-right: 20px;
@@ -623,14 +670,14 @@ body {
     flex: 1;
   }
   .contact-form h2 {
-    color: #fff;
+    color: #000;
     text-align: center;
     font-size: 35px;
     text-transform: uppercase;
     margin-bottom: 30px;
   }
   .contact-form .text-box {
-    background: #000;
+    background: #1DA0F0;
     color: #fff;
     border: none;
     width: calc(50% - 10px);
@@ -646,7 +693,7 @@ body {
     margin-right: 15px;
   }
   .contact-form textarea {
-    background: #000;
+    background: #1DA0F0;
     color: #fff;
     border: none;
     width: 100%;
@@ -697,7 +744,47 @@ body {
       width: 100%;
     }
   }
+  /* contact end */
+
+  /* jumbotron start */
+  .bg-img-jumbotron {
+    background-image: url('../../assets/img/bg-img/hero-contact.png');
+    background-size: contain;
+    width: 100%;
+    height: 590px;
+  }
+  #hero-contact .jumbotron h1 {
+    margin-top: 350px;
+  }
+  /* jumbotron end */
   /* CSS view Contact end */
+
+  /* Poliklinik CRUD */
+  #table-section {
+    padding-top: 55px;
+  }
+  #create-pasien {
+    padding-top: 35px;
+  }
+  #table-section .container thead {
+    background-color: #0f8fdd;
+    font-size: 16px;
+  }
+  #table-section .container tbody {
+    font-size: 15px;
+  }
+  .table>thead>tr>th {
+    vertical-align: middle;
+    text-align: center;
+  }
+  #create-pasien .container {
+    width:  500px;
+  }
+  #detail-messages {
+    padding-top: 90px;
+  }
+
+  
 
 
 }
