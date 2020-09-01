@@ -42,7 +42,7 @@ $routes->get('/contact', 'Pages::contact');
 // page polikliknik
 $routes->get('/poliklinik', 'Poliklinik::index');
 $routes->get('/poliklinik/detail/(:segment)', 'Poliklinik::detail/$1');
-$routes->get('/poliklinik/update/(:segment)', 'poliklinik::update/$1');
+$routes->get('/poliklinik/update/(:segment)', 'Poliklinik::update/$1');
 /**
  * --------------------------------------------------------------------
  * Additional Routing
