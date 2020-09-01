@@ -1,7 +1,7 @@
 <?= $this->extend('layout/tamplate'); ?>
 
 <?= $this->section('content'); ?>
-<?= $this->include('layout/navbar/navbarPoliklinik'); ?>
+<?= $this->include('layout/navbar'); ?>
 <section id="table-section">
   <div class="container mt-4 bg-light">
     <div class="row">
@@ -69,46 +69,15 @@
                 <td><?= $p['Gender']; ?></td>
                 <td>
                   <div class="btn-group">
-                    <a href="/poliklinik/update/<?= $p['Id_Pasien']; ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-                    <a href="/poliklinik/detail/<?= $p['Id_Pasien']; ?>" class="btn btn-warning btn-sm text-white"><i class="fas fa-search"></i></a>
-                    <a href="/poliklinik/delete/<?= $p['Id_Pasien']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus pasien atas nama <?= $p['Nama_Pasien']; ?> ... ini?')"><i class="far fa-trash-alt"></i></a>
+                    <a href="/poliklinik/update/<?= $p['Id_Pasien']; ?>" data-toggle="tooltip" data-placement="top" title="Update" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                    <a href="/poliklinik/detail/<?= $p['Id_Pasien']; ?>" data-toggle="tooltip" data-placement="top" title="Search" class="btn btn-warning btn-sm text-white"><i class="fas fa-search"></i></a>
+                    <a href="/poliklinik/delete/<?= $p['Id_Pasien']; ?>" data-toggle="tooltip" data-placement="top" title="Delete" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus pasien atas nama <?= $p['Nama_Pasien']; ?> ... ini?')"><i class="far fa-trash-alt"></i></a>
                   </div>
                 </td>
               </tr>
             <?php endforeach; ?>
           </tbody>
         </table>
-
-        <!-- Modal Update Pasien Start -->
-        <div class="modal fade" id="update" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                    <input type="text" class="form-control" id="recipient-name">
-                  </div>
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Message:</label>
-                    <textarea class="form-control" id="message-text"></textarea>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Modal Update Pasien End -->
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <?= $this->extend('layout/tamplate'); ?>
 
 <?= $this->section('content'); ?>
-<?= $this->include('layout/navbar/navbarPoliklinik'); ?>
+<?= $this->include('layout/navbar'); ?>
 <section id="create-pasien">
   <div class="container mt-5 bg-light">
     <div class="col-12">
@@ -76,6 +76,8 @@
         </div>
         <div class="form-group">
           <a href="/poliklinik" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
+          <button type="reset" class="btn btn-warning btn-sm text-white"><i class="fas fa-redo-alt"></i> Reset Data</button>
+
           <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
         </div>
       </form>

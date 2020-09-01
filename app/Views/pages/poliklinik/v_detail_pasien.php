@@ -1,7 +1,7 @@
 <?= $this->extend('layout/tamplate'); ?>
 
 <?= $this->section('content'); ?>
-<?= $this->include('layout/navbar/navbarPoliklinik'); ?>
+<?= $this->include('layout/navbar'); ?>
 <section id="detail-messages">
   <div class="container">
     <div class="card text-center">
@@ -55,6 +55,9 @@
                 <td><?= $pasien['Gender']; ?></td>
               </tr>
             </table>
+          </div>
+          <div class="col-12 mt-3">
+            <a href="/poliklinik" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
           </div>
         </div>
       </div>
