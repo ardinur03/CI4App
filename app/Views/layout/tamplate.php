@@ -42,7 +42,7 @@
 </head>
 
 <body>
-<?= $this->renderSection('content'); ?>
+  <?= $this->renderSection('content'); ?>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
