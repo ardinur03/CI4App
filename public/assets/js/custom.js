@@ -1,10 +1,10 @@
 // parallax
-$(window).scroll(function() {
+$(window).scroll(function () {
   var wScroll = $(this).scrollTop();
 
   // tulisan welcome
   $('.jumbotron .container  h1').css({
-      'transform' : 'translate(0px, '+ wScroll/1.2 + '%)'
+    'transform': 'translate(0px, ' + wScroll / 1.2 + '%)'
   });
 
   // navbar
@@ -12,12 +12,12 @@ $(window).scroll(function() {
   //     'transform' : 'translate(0px, '+ wScroll + '%)'
   // });
 
-  
+
 });
 
 
 // navbar scroll
-$(window).scroll(function() {
+$(window).scroll(function () {
   $('nav').toggleClass('scrolled', $(this).scrollTop() > 560);
 });
 
@@ -27,12 +27,12 @@ $(function () {
 })
 
 // jam 
-window.setTimeout("waktu()", 1000);
+// window.setTimeout("waktu()", 1000);
 
-function waktu() {
-  var waktu = new Date();
-  setTimeout("waktu()", 1000);
-  document.getElementById("jam").innerHTML = waktu.getHours();
-  document.getElementById("menit").innerHTML = waktu.getMinutes();
-  document.getElementById("detik").innerHTML = waktu.getSeconds();
-}
+// function waktu() {
+//   var waktu = new Date();
+//   setTimeout("waktu()", 1000);
+//   document.getElementById("jam").innerHTML = waktu.getHours();
+//   document.getElementById("menit").innerHTML = waktu.getMinutes();
+//   document.getElementById("detik").innerHTML = waktu.getSeconds();
+// }
