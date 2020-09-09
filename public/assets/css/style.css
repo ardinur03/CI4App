@@ -10,14 +10,17 @@ body {
   position: relative;
   z-index: 1;
 }
+
 .navbar-brand {
   font-family: 'Nunito Sans', sans-serif;
   color: white;
 }
+
 .bg-tranparent {
   transition: 0.9s ease;
   background: #3952f9;
 }
+
 /* NAVBAR AKHIR */
 
 /* JUMBOTRON AWAL IN HOME*/
@@ -31,6 +34,7 @@ body {
   /* background-repeat: no-repeat;
   background-attachment: fixed; */
 }
+
 .jumbotron::after {
   content: '';
   display: block;
@@ -40,10 +44,12 @@ body {
   position: absolute;
   bottom: 0;
 }
+
 .jumbotron .container {
   z-index: 1;
   position: relative;
 }
+
 .jumbotron .display-4 {
   color: white;
   text-shadow: 2px 4px 3px rgba(219, 201, 201, 0.048);
@@ -52,6 +58,7 @@ body {
   margin-top: 150px;
   font-size: 35px;
 }
+
 /* JUMBOTRON AKHIR IN V_HOME*/
 
 /* INFO PANEL AWAL IN V_HOME */
@@ -62,6 +69,7 @@ body {
   margin-top: -135px;
   background-color: white;
 }
+
 .info-panel img {
   width: 80px;
   height: 80px;
@@ -69,31 +77,34 @@ body {
   margin-bottom: 20PX;
   margin-top: 10px;
 }
+
 .info-panel h4 {
   font-size: 14PX;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 30px;
 }
+
 .info-panel p {
   font-size: 14PX;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: -5;
 }
+
 /* INFO PANEL AKHIR IN V_HOME */
 
 /* OPENING AWAL IN V_HOME */
 .opening {
   margin-top: 38px;
-  background-color: #1DA0F0;
   padding-left: 20px;
   height: 350px;
   padding: 60px;
   padding-top: 25px;
 }
+
 .opening h2 {
-  color: #fafafa !important;
+  color: #000000 !important;
   text-align: center;
   font-size: 35px;
   padding-top: 30px;
@@ -101,30 +112,115 @@ body {
   font-family: 'Bebas Neue', cursive;
   word-spacing: normal;
 }
+
 /* OPNENING AKHIR V_HOME */
+
+/* OPENING LEARN IN HOME START */
+#opening-learn .box-learn {
+  height: 300px;
+  margin: 10px;
+  box-shadow: 0 1px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+#opening-learn .box-learn h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#opening-learn .box-learn p {
+  font-size: 15px;
+  text-align: center;
+}
+
+#opening-learn .box-learn:hover {
+  color: #ffffff;
+  height: 320px;
+  background-color: #3384FD;
+  transition: 0.9s ease;
+}
+
+#opening-learn .box-warna {
+  color: #ffffff;
+  background-color: #3384FD;
+}
+
+#opening-learn .box-warna:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+#opening-learn img {
+  height: auto;
+  width: 70px;
+  align-self: center;
+  padding-top: 50px;
+  transition: 0.9s ease;
+}
+
+#opening-learn img:hover {
+  height: auto;
+  width: 120px;
+  align-self: center;
+  padding-top: 50px;
+}
+
+#opening-learn .card-footer {
+  text-align: center;
+}
+
+/* OPENING LEARN IN HOME  END*/
+
+/* BANNER TEXT START */
+#banner-text {
+  padding-top: 50px;
+  height: 70vh;
+}
+
+#banner-text h2 {
+  font-size: 13vw;
+  text-align: left;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'poppins', Arial, Helvetica, sans-serif;
+  line-height: 90px;
+}
+
+#banner-text h2 span {
+  font-family: 'Lora', serif;
+  font-weight: normal;
+  margin-left: 40px;
+}
+
+/* BANNER TEXT END */
 
 /* CARAUSEL AWAL IN ABOUT */
 .carousel-item {
   position: relative;
 
 }
+
 .carousel-item h1 {
   font-size: 40px;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.726);
 }
+
 .carousel-item p {
   font-size: 17px;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.726);
 }
+
 .carousel-item .btn {
   border-radius: 20%;
   background-color: #8c8c8c;
   color: white;
   margin-bottom: 30px;
 }
+
 .carousel-item i {
   color: #c0c0c0;
 }
+
 /* CARAOUSEL AKHIR IN ABOUT */
 
 /* SECTION SOSIAL MEDIA AWAL IN ABOUT*/
@@ -136,6 +232,7 @@ body {
   justify-content: center;
   transform: translate(-290px, 0);
 }
+
 .social a {
   color: #fff;
   background: rgba(0, 0, 0, 0.4);
@@ -151,30 +248,37 @@ body {
   transition: 1s;
   transition-property: transform;
 }
+
 .social a:hover {
   transform: translate(140px, 0);
 }
+
 .social i {
   margin-left: 2px;
   font-size: 30px;
   width: 30px;
   height: 30px;
 }
+
 .social a:nth-child(1) i {
   color: #1DA0F0;
 }
+
 .social a:nth-child(2) i {
   color: #F80000;
 }
+
 .social a:nth-child(3) i {
   color: transparent;
   background-image: linear-gradient(45deg, #FFDF9E, #E56969, #8A49A1);
   font-weight: 600;
   -webkit-background-clip: text;
 }
+
 .social a:nth-child(4) i {
   color: #4ECCE8;
 }
+
 /* SECTION SOSIAL MEDIA AKHIR IN ABOUT*/
 
 /* CSS view Contact start */
@@ -184,6 +288,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .contact-info {
   color: #000;
   max-width: 500px;
@@ -191,18 +296,22 @@ body {
   padding-left: 50px;
   font-size: 15px;
 }
+
 .contact-info i {
   margin-right: 20px;
   font-size: 20px;
 }
+
 .contact-form {
   max-width: 700px;
   margin-right: 50px;
 }
+
 .contact-info,
 .contact-form {
   flex: 1;
 }
+
 .contact-form h2 {
   color: #000;
   text-align: center;
@@ -210,6 +319,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+
 .contact-form .text-box {
   background: #1DA0F0;
   color: #fff;
@@ -223,9 +333,11 @@ body {
   margin-bottom: 20px;
   opacity: 0.9;
 }
+
 .contact-form .text-box:first-child {
   margin-right: 15px;
 }
+
 .contact-form textarea {
   background: #1DA0F0;
   color: #fff;
@@ -241,6 +353,7 @@ body {
   margin-bottom: 20px;
   opacity: 0.9;
 }
+
 .contact-form .send-btn {
   float: right;
   background: #2E94E3;
@@ -257,12 +370,15 @@ body {
   transition: 0.3s;
   transition-property: background;
 }
+
 .contact-form .send-btn:hover {
   background: #0582E3;
 }
+
 #contact-section .container p {
   display: inline;
 }
+
 @media screen and (max-width: 950px) {
   .contact-section {
     flex-direction: column;
@@ -281,6 +397,7 @@ body {
     width: 100%;
   }
 }
+
 /* CSS view Contact end */
 
 /*Footer CSS Start*/
@@ -290,19 +407,23 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 #footer .socials-media {
   width: 100%;
 }
+
 #footer .socials-media ul {
   display: inline-block;
   float: none;
   margin: 0 0 10px 0;
 }
+
 #footer .socials-media ul li {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
 }
+
 #footer .socials-media ul li a {
   font-size: 18px;
   color: #999;
@@ -316,6 +437,7 @@ body {
   -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
 }
+
 #footer .socials-media ul li a:hover {
   color: #fafafa;
   font-size: 25px;
@@ -325,6 +447,7 @@ body {
   -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
 }
+
 #footer p {
   font-size: 10px;
   letter-spacing: 0.1em;
@@ -333,13 +456,16 @@ body {
   text-transform: uppercase;
   color: white;
 }
+
 #footer .container .credits a {
   text-decoration: none;
   color: #fafafa;
 }
+
 #footer .container .credits {
   font-size: 10px;
 }
+
 #footer .container .credits a:hover {
   text-decoration: none;
   color: #0307b6;
@@ -354,6 +480,7 @@ body {
     margin: 0;
     padding: 0;
   }
+
   /* NAVBAR AWAL TAMPLATE*/
   .nav-bar,
   .nav-link {
@@ -362,16 +489,20 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     /* padding-right: 80px; */
   }
+
   .navbar-atas {
     left: 30px;
     right: 30px;
   }
+
   .nav-link {
     margin-right: 5px;
   }
+
   .active {
     color: #ffffff4b;
   }
+
   .present {
     content: '-';
     border-bottom: 3px solid #ffffff4b;
@@ -380,23 +511,28 @@ body {
     padding-bottom: 5px;
     margin-bottom: -8px;
   }
-  .navbar .nama{
+
+  .navbar .nama {
     font-family: 'Nunito Sans', sans-serif;
     color: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 9);
     /* padding-top: 25px; */
     /* margin-left: -10px; */
   }
+
   .navbar-brand {
     font-size: 22px;
   }
+
   .navbar-nav {
     font-size: 17px;
   }
+
   .bg-tranparent {
     transition: 0.9s ease;
     background: transparent !important;
   }
+
   .scrolled {
     background-color: #1d77fe !important;
     width: 100%;
@@ -404,6 +540,7 @@ body {
     opacity: 0.9;
 
   }
+
   .navbar a {
     color: #131313;
   }
@@ -425,6 +562,7 @@ body {
     position: relative;
     background-repeat: no-repeat;
   }
+
   .jumbotron::after {
     content: '';
     display: block;
@@ -434,6 +572,7 @@ body {
     position: absolute;
     bottom: 0;
   }
+
   .jumbotron .display-4 {
     color: #fafafa;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
@@ -444,6 +583,7 @@ body {
     font-weight: 800;
     opacity: 0.3;
   }
+
   /* JUMBOTRON HOME AKHIR */
 
   /* info panel AWAL IN HOME */
@@ -454,6 +594,7 @@ body {
     background-color: white;
     z-index: 1;
   }
+
   .info-panel img {
     width: 120px;
     height: 120px;
@@ -461,70 +602,164 @@ body {
     margin-bottom: 20PX;
     margin-top: 10px;
   }
+
   .info-panel h4 {
     font-size: 16PX;
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 40px;
   }
+
   .info-panel p {
     font-size: 16PX;
     text-transform: uppercase;
     font-weight: bold;
     margin-top: -5;
   }
+
   .info-panel .school {
     margin-top: 40px;
   }
+
   /* INFO PANEL AKHIR IN HOME*/
 
-  /* OPENING AWAL */
+  /* OPENING AWAL IN HOME */
   .opening {
-    margin-top: 38px;
-    background-color: #1DA0F0;
     padding-left: 20px;
+    background-color: #fafafa;
+    box-shadow: 0px 7px 20px rgb(0, 0, 0.1);
     height: 605px;
     padding: 60px;
     padding-top: 25px;
+    margin: 5px 10px 5px 10px;
+    border-radius: 300px 15px;
   }
+
   .opening h2 {
-    color: #fafafa !important;
+    color: #000000 !important;
     text-align: center;
     font-size: 60px;
     line-height: 90px;
-    padding-top: 50px;
+    padding-top: 30px;
+    font-weight: 100;
     font-family: 'Lora', serif;
     word-spacing: normal;
   }
-  /* OPNENING AKHIR */
+
+  /* OPNENING AKHIR IN HOME*/
+
+  /* OPENING LEARN IN HOME START */
+  #opening-learn .box-learn {
+    height: 450px;
+    margin: 5px;
+    box-shadow: 0 1px 10px rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+
+  #opening-learn .box-learn h3 {
+    font-size: 2rem;
+  }
+
+  #opening-learn .box-learn p {
+    font-size: 1rem;
+  }
+
+  #opening-learn .box-learn:hover {
+    color: #ffffff;
+    height: 450px;
+    background-color: #3384FD;
+    transition: 0.9s ease;
+  }
+
+  #opening-learn .box-warna {
+    color: #ffffff;
+    background-color: #3384FD;
+  }
+
+  #opening-learn .box-warna:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  #opening-learn img {
+    height: auto;
+    width: 100px;
+    align-self: center;
+    padding-top: 50px;
+    transition: 0.9s ease;
+  }
+
+  #opening-learn img:hover {
+    height: auto;
+    width: 120px;
+    align-self: center;
+    padding-top: 50px;
+  }
+
+  #opening-learn .card-footer {
+    text-align: center;
+  }
+
+  /* OPENING LEARN IN HOME  END*/
+
+  /* BANNER TEXT START */
+  #banner-text {
+    padding-top: 50px;
+    height: 100vh;
+  }
+
+  #banner-text h2 {
+    font-size: 14vw;
+    text-align: left;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    line-height: 180px;
+    display: block;
+  }
+
+  #banner-text h2 span {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    /* margin-left: 150px; */
+  }
+
+  /* BANNER TEXT END */
 
   /* CARAOUSEL AWAL IN ABOUT*/
   .carousel {
     transition: transform 1s ease, opacity .3s ease-out;
   }
+
   .carousel-item img {
     height: 670px;
   }
+
   .carousel-item .display-4 {
     margin-top: -360px;
   }
+
   .carousel-item h1 {
     font-size: 80px;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.726);
   }
+
   .carousel-item p {
     font-size: 35px;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.726);
   }
+
   .carousel-item .btn {
     border-radius: 20%;
     background-color: #8c8c8c;
     color: white;
     margin-top: -4px;
   }
+
   .carousel-item i {
     color: #c0c0c0;
   }
+
   /* CARAOUSEL AKHIR IN ABOUT*/
 
   /* SOCIAL MEDIA AWAL IN ABOUT */
@@ -536,6 +771,7 @@ body {
     justify-content: center;
     transform: translate(-290px, 0);
   }
+
   .social a {
     color: #fff;
     background: rgba(0, 0, 0, 0.4);
@@ -551,30 +787,37 @@ body {
     transition: 1s;
     transition-property: transform;
   }
+
   .social a:hover {
     transform: translate(140px, 0);
   }
+
   .social i {
     margin-left: 2px;
     font-size: 30px;
     width: 30px;
     height: 30px;
   }
+
   .social a:nth-child(1) i {
     color: #1DA0F0;
   }
+
   .social a:nth-child(2) i {
     color: #F80000;
   }
+
   .social a:nth-child(3) i {
     color: transparent;
     background-image: linear-gradient(45deg, #FFDF9E, #E56969, #8A49A1);
     font-weight: 600;
     -webkit-background-clip: text;
   }
+
   .social a:nth-child(4) i {
     color: #4ECCE8;
   }
+
   /* SOSIAL MEDIA AKHIR IN ABOUT */
 
   /*Footer CSS Start*/
@@ -584,19 +827,23 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
   #footer .socials-media {
     width: 100%;
   }
+
   #footer .socials-media ul {
     display: inline-block;
     float: none;
     margin: 0 0 20px 0;
   }
+
   #footer .socials-media ul li {
     float: left;
     margin-left: 10px;
     margin-right: 10px;
   }
+
   #footer .socials-media ul li a {
     font-size: 24px;
     color: #999;
@@ -610,6 +857,7 @@ body {
     -webkit-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
   }
+
   #footer .socials-media ul li a:hover {
     color: #fafafa;
     font-size: 35px;
@@ -619,6 +867,7 @@ body {
     -webkit-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
   }
+
   #footer p {
     font-size: 12px;
     letter-spacing: 0.1em;
@@ -627,15 +876,18 @@ body {
     text-transform: uppercase;
     color: white;
   }
+
   #footer .container .credits {
     font-size: 15px;
   }
+
   #footer .container .credits a {
-    text-decoration:none;
+    text-decoration: none;
     color: #fafafa;
   }
+
   #footer .container .credits a:hover {
-    text-decoration:none;
+    text-decoration: none;
     color: #0307b6;
   }
 
@@ -647,6 +899,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   .contact-info {
     color: #000;
     max-width: 500px;
@@ -654,21 +907,26 @@ body {
     padding-left: 50px;
     font-size: 18px;
   }
+
   #contact-section .container p {
     display: inline;
   }
+
   .contact-info i {
     margin-right: 20px;
     font-size: 25px;
   }
+
   .contact-form {
     max-width: 700px;
     margin-right: 50px;
   }
+
   .contact-info,
   .contact-form {
     flex: 1;
   }
+
   .contact-form h2 {
     color: #000;
     text-align: center;
@@ -676,6 +934,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 30px;
   }
+
   .contact-form .text-box {
     background: #1DA0F0;
     color: #fff;
@@ -689,9 +948,11 @@ body {
     margin-bottom: 20px;
     opacity: 0.9;
   }
+
   .contact-form .text-box:first-child {
     margin-right: 15px;
   }
+
   .contact-form textarea {
     background: #1DA0F0;
     color: #fff;
@@ -707,6 +968,7 @@ body {
     margin-bottom: 20px;
     opacity: 0.9;
   }
+
   .contact-form .send-btn {
     float: right;
     background: #2E94E3;
@@ -723,9 +985,11 @@ body {
     transition: 0.3s;
     transition-property: background;
   }
+
   .contact-form .send-btn:hover {
     background: #0582E3;
   }
+
   @media screen and (max-width: 950px) {
     .contact-section {
       flex-direction: column;
@@ -744,6 +1008,7 @@ body {
       width: 100%;
     }
   }
+
   /* contact end */
 
   /* jumbotron start */
@@ -753,38 +1018,45 @@ body {
     width: 100%;
     height: 590px;
   }
+
   #hero-contact .jumbotron h1 {
     margin-top: 350px;
   }
+
   /* jumbotron end */
   /* CSS view Contact end */
+
+
 
   /* Poliklinik CRUD */
   #table-section {
     padding-top: 55px;
   }
+
   #create-pasien {
     padding-top: 35px;
   }
+
   #table-section .container thead {
     background-color: #0f8fdd;
     font-size: 16px;
   }
+
   #table-section .container tbody {
     font-size: 15px;
   }
+
   .table>thead>tr>th {
     vertical-align: middle;
     text-align: center;
   }
+
   #create-pasien .container {
-    width:  500px;
+    width: 500px;
   }
+
   #detail-messages {
     padding-top: 90px;
   }
-
-  
-
 
 }
