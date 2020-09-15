@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/assets/img/bg-img/slide1.jpg" class="d-block w-100" alt="Image Slider Not Found">
+        <img src="/assets/img/bg-img/hero-ardi.png" class="d-block w-100" alt="Image Slider Not Found">
         <div class="carousel-caption d-none d-md-block">
           <h1 class="display-4">Welcome To My Website</h1>
           <p class="font-font-weight-bold">Explore My Website</p>
@@ -51,7 +51,7 @@
 
 <!--social buttons start-->
 <!-- <section id="Social-Media" class="d-none d-sm-block">
-  <div class="social">
+  <div class="social  mt-5 mb-5">
     <a href="#">Facebook <i class="fab fa-facebook"></i></a>
     <a href="#">Youtube <i class="fab fa-youtube"></i></a>
     <a href="#">Instagram <i class="fab fa-instagram"></i></a>

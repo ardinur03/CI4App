@@ -6,9 +6,11 @@
           <?= csrf_field(); ?>
           <div class="form-group">
             <label for="pasien" class="col-form-label">Id Pasien :</label>
-            <input type="text" name="Id_Pasien" value="<?= (old('Id_Pasien')) ? old('Id_Pasien') : $pasien['Id_Pasien'] ?>" class="form-control <?= ($validation->hasError('Id_Pasien')) ? 'is-invalid' : ''; ?>" id="pasien" autofocus>
-            <div class="invalid-feedback">
-              <?= $validation->getError('Id_Pasien'); ?>
+            <div class="input-group">
+              <input type="text" name="Id_Pasien" value="<?= $pasien['Id_Pasien'] ?>" class="form-control" id="pasien" readonly>
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
+              </div>
             </div>
           </div>
           <div class="form-group">

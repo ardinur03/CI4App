@@ -27,22 +27,18 @@
             <div class="alert alert-success">
               <?php echo session()->getFlashdata('success'); ?>
             </div>
-
           <?php } ?>
           <?php if (!empty(session()->getFlashdata('info'))) { ?>
 
             <div class="alert alert-primary">
               <?php echo session()->getFlashdata('info'); ?>
             </div>
-
           <?php } ?>
-
           <?php if (!empty(session()->getFlashdata('warning'))) { ?>
 
             <div class="alert alert-danger">
               <?php echo session()->getFlashdata('warning'); ?>
             </div>
-
           <?php } ?>
         </div>
       </div>
