@@ -178,7 +178,7 @@ body {
 }
 
 #banner-text h2 {
-  font-size: 13vw;
+  font-size: 12vw;
   text-align: left;
   font-weight: 900;
   text-transform: uppercase;
@@ -1013,7 +1013,7 @@ body {
 
   /* jumbotron start */
   .bg-img-jumbotron {
-    background-image: url('../../assets/img/bg-img/hero-contact.png');
+    background-image: url('../../assets/img/bg-img/hero-ardi.png');
     background-size: contain;
     width: 100%;
     height: 590px;
@@ -1028,35 +1028,6 @@ body {
 
 
 
-  /* Poliklinik CRUD */
-  #table-section {
-    padding-top: 55px;
-  }
 
-  #create-pasien {
-    padding-top: 35px;
-  }
-
-  #table-section .container thead {
-    background-color: #0f8fdd;
-    font-size: 16px;
-  }
-
-  #table-section .container tbody {
-    font-size: 15px;
-  }
-
-  .table>thead>tr>th {
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  #create-pasien .container {
-    width: 500px;
-  }
-
-  #detail-messages {
-    padding-top: 90px;
-  }
 
 }
