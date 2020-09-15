@@ -8,7 +8,7 @@ class SpesialisModel extends Model
 {
   protected $table          = 'spesialis';
   protected $primarykey     = 'Id_Spec';
-  protected $allowedFields  = ['Id_Spe', 'Spec'];
+  protected $allowedFields  = ['Id_Spec', 'Spec'];
 
   //mengambil data di database
   public function getSpesialis($Id_Spec = false)

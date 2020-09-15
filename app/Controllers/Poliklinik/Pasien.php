@@ -8,7 +8,6 @@ use CodeIgniter\HTTP\Request;
 
 class Pasien extends BaseController
 {
-
   protected $poliklinik;
   public function __construct()
   {
@@ -16,15 +15,17 @@ class Pasien extends BaseController
     $this->poliklinik = new PasienModel();
     /* Catatan:
         Apa yang ada di dalam function construct ini nantinya bisa digunakan
-        pada function di dalam class pasien 
+        pada function di dalam class pasien(file ini)
     */
   }
 
+  //----------------------------READ----------------------------------------
   public function index()
   {
-
+    // operasi ternari if untuk halaman pagination
     $curretPage = $this->request->getVar('page_pasien') ?  $this->request->getVar('page_pasien') : 1;
 
+    // logika if untuk form search
     $keyword = $this->request->getVar('keyword');
     if ($keyword) {
       $pasien = $this->poliklinik->search($keyword);
@@ -33,37 +34,45 @@ class Pasien extends BaseController
     }
 
     $data = [
-      'title' => 'Poliklinik | Poliklinik',
+      'title' => 'Poliklinik | Pasien',
       'methodName' => '/poliklinik',
-      // 'pasien' => $this->poliklinik->getPasien()
-      'pasien' => $pasien->paginate(6, 'pasien'),
+      // 'pasien' => $this->poliklinik->getPasien() <= karena menggunakan pagination jadi tidak perlu lagi getPasien
+      'pasien' => $pasien->paginate(5, 'pasien'), //paginate(); akanotomatis get data pasien 
       'pager'  => $this->poliklinik->pager,
       'currentPage' => $curretPage,
+      // Key isi => ini nilai yg isinya link menuju view v_index_spesialis
       'isi'   => 'Poliklinik/Pasien/v_index_pasien',
       'judul' => 'Tabel Pasien'
     ];
-
+    /* 
+    * kemudian data akan di tembakkan ke view v_wrapper yaitu sebagai template poliklinik pembungkus yang dinamis
+    */
     return view('layout/poliklinik/v_wrapper', $data);
   }
+  //------------------------------------------------------------------------
 
+  //------------------------DETAIL------------------------------------------
   // method detail ke v_detail
   public function detail($id)
   {
     $data = [
-      'title'   => 'Detail Pasien',
+      'title'   => 'Pasien | Detail',
       'methodName' => '/poliklinik',
       'pasien'  => $this->poliklinik->getPasien($id),
+      // Key isi => ini nilai yg isinya link menuju view v_index_spesialis
       'isi'     => 'Poliklinik/Pasien/v_detail_pasien',
       'judul'   => 'Detail Pasien'
     ];
-
     // jika request tidak ada di databse
     if (empty($data['pasien'])) {
       throw new \CodeIgniter\Exceptions\PageNotFoundException('Id Pasien ' . $id . ' tidak di temukan.');
     }
-
+    /* 
+    * kemudian data akan di tembakkan ke view v_wrapper yaitu sebagai template poliklinik pembungkus yang dinamis
+    */
     return view('layout/poliklinik/v_wrapper', $data);
   }
+  //--------------------------------------------------------------------------
 
   //-----------------DELETE---------------------------------------------------
   public function delete($id)
@@ -75,24 +84,27 @@ class Pasien extends BaseController
     if ($hapus) {
       // Deklarasikan session flashdata dengan tipe warning
       session()->setFlashdata('warning', 'Deleted Pasien successfully');
-      // Redirect ke halaman product
+      // Redirect ke halaman Poliklinik/Pasien
       return redirect()->to(base_url('Poliklinik/Pasien'));
     }
   }
-  //--------------------------------------------------------------------
+  //--------------------------------------------------------------------------
 
   //----------------------CREATE----------------------------------------------
   public function create()
   {
-    // session(); ==>Bisa langsung disini atau bisa juga di basecontrollernya
+    // session(); ==> Bisa langsung disini atau bisa juga di basecontrollernya
     $data = [
-      'title'        => 'Create Pasien',
-      'methodName' => '/poliklinik',
+      'title'        => 'Pasien | Create',
+      'methodName'   => '/poliklinik',
       'validation'   => \Config\Services::validation(),
       'judul'        => 'Tambah Data Pasien',
+      // Key isi => ini nilai yg isinya link menuju view v_index_spesialis
       'isi'          => 'poliklinik/pasien/v_create_pasien'
     ];
-
+    /* 
+    * kemudian data akan di tembakkan ke view v_wrapper yaitu sebagai template poliklinik pembungkus yang dinamis
+    */
     return view('layout/poliklinik/v_wrapper', $data);
   }
 
@@ -176,15 +188,15 @@ class Pasien extends BaseController
 
     // Membuat array collection yang disiapkan untuk insert ke table
     $data = [
-      'Id_Pasien'   => $Id_Pasien,
-      'Nama_Pasien' => $Nama_Pasien,
-      'Gender'      => $Gender,
+      'Id_Pasien'        => $Id_Pasien,
+      'Nama_Pasien'      => $Nama_Pasien,
+      'Gender'           => $Gender,
       'Alamat_Detail'    => $Alamat_Detail,
       'Alamat_Kelurahan' => $Alamat_Kelurahan,
       'Alamat_Kecamatan' => $Alamat_Kecamatan,
-      'Alamat_KotaKab' => $Alamat_KotaKab,
-      'Tmp_Lahir' => $Tmp_Lahir,
-      'Tgl_Lahir' => $Tgl_Lahir,
+      'Alamat_KotaKab'   => $Alamat_KotaKab,
+      'Tmp_Lahir'        => $Tmp_Lahir,
+      'Tgl_Lahir'        => $Tgl_Lahir,
     ];
 
     /* 
@@ -210,14 +222,17 @@ class Pasien extends BaseController
     // $data['pasien'] = $this->poliklinik ->getPasien($id);
     // $data = ['title' => 'Create Pasien'];
     $data = [
-      'title' => 'Update Pasien',
+      'title' => 'Pasien | Update',
       'methodName' => '/poliklinik',
       'pasien' => $this->poliklinik->getPasien($id),
       'validation' => \Config\Services::validation(),
+      // Key isi => ini nilai yg isinya link menuju view v_index_spesialis
       'isi' => 'Poliklinik/Pasien/v_update_pasien',
       'judul' => 'Edit Data Pasien'
     ];
-    // Mengirim data ke dalam view
+    /* 
+    * kemudian data akan di tembakkan ke view v_wrapper yaitu sebagai template poliklinik pembungkus yang dinamis
+    */
     return view('layout/poliklinik/v_wrapper', $data);
   }
 
@@ -324,4 +339,5 @@ class Pasien extends BaseController
       return redirect()->to(base_url('Poliklinik/Pasien'));
     }
   }
+  //--------------------------------------------------------------------------
 }

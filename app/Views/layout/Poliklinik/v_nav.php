@@ -47,12 +47,6 @@
               <p>Spesialis</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="/Poliklinik/Dokter" class="nav-link <?= ($methodName == '/dokter') ? 'active' : ''; ?>">
-              <i class="nav-icon fas fa-user-md"></i>
-              <p>Dokter</p>
-            </a>
-          </li>
         </ul>
       </li>
       <!-- Poliklinik end -->

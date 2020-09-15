@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row justify-content-center mt-3">
       <div class="col-md-4">
-        <form action="/Poliklinik/Spesialis/proses_update/<?= $spesialis['Id_Spec']; ?>" method="POST">
+        <form action="<?= base_url('/Poliklinik/Spesialis/proses_update/ ' . $spesialis['Id_Spec']); ?>" method="POST">
           <?= csrf_field(); ?>
           <div class="form-group">
             <label for="disabledInput">Kode Spesialis</label>
             <div class="input-group">
-              <input type="text" class="form-control" id="disabledInput" name="Id_Spec" value="<?= $spesialis['Id_Spec']; ?>" readonly>
+              <input type="text" class="form-control" id="disabledInput" name="Id_Spec" value="<?= $spesialis['Id_Spec'] ?>" readonly>
               <div class="input-group-prepend">
                 <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
               </div>

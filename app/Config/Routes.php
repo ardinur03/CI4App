@@ -41,12 +41,13 @@ $routes->get('/contact', 'Pages::contact');
 
 //  polikliknik
 $routes->get('/poliklinik', 'Poliklinik\Home::index');
+
 //CRUD PASIEN
 $routes->get('/Poliklinik/Pasien/detail/(:segment)', 'Poliklinik\Pasien::detail/$1');
 $routes->get('/Poliklinik/Pasien/Update(:segment)', 'Poliklinik\Pasien::update/$1');
-//CRUD DOKTER
-$routes->get('/Poliklinik/Dokter/Update(:segment)', 'Poliklinik\Dokter::update/$1');
+
 //CRUD SPESIALIS
+$routes->get('/Poliklinik/Spesialis/Detail/(:segment)', 'Poliklinik\Spesialis::detail/$1');
 $routes->get('/Poliklinik/Spesialis/Update(:segment)', 'Poliklinik\Spesialis::update/$1');
 
 /**

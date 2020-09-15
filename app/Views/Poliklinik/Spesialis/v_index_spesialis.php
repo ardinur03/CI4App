@@ -33,14 +33,14 @@
           <tbody>
             <?php $no = 1 + (5 * ($currentPage - 1)); ?>
             <?php foreach ($spesialis as $s) : ?>
-              <tr>
+              <tr class="text-center">
                 <td scope="row"><?= $no++; ?></td>
                 <td><?= $s['Id_Spec']; ?></td>
                 <td><?= $s['Spec']; ?></td>
                 <td>
                   <div class="btn-group">
-                    <a href="/Poliklinik/Spesialis/Update/<?= $s['Id_Spec']; ?>" class=" btn btn-primary btn-sm" data-placement="top" title="Search" data-toggle="tooltip"><i class="fas fa-edit"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Search" class="btn btn-warning btn-sm text-white"><i class="fas fa-search"></i></a>
+                    <a href="/Poliklinik/Spesialis/Update/<?= $s['Id_Spec']; ?>" class=" btn btn-primary btn-sm" data-placement="top" title="Edit" data-toggle="tooltip"><i class="fas fa-edit"></i></a>
+                    <a href="/Poliklinik/Spesialis/Detail/<?= $s['Id_Spec']; ?>" data-toggle="tooltip" data-placement="top" title="Search" class="btn btn-warning btn-sm text-white"><i class="fas fa-search"></i></a>
                     <a href="/Poliklinik/Spesialis/delete/<?= $s['Id_Spec']; ?>" data-toggle="tooltip" data-placement="top" title="Delete" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus spesialis :  <?= $s['Spec']; ?> ... ini?')"><i class="far fa-trash-alt"></i></a>
                   </div>
                 </td>

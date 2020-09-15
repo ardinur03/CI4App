@@ -65,7 +65,7 @@
             </tr>
           </thead>
           <tbody>
-            <?php $no = 1 + (6 * ($currentPage - 1)); ?>
+            <?php $no = 1 + (5 * ($currentPage - 1)); ?>
             <?php foreach ($pasien as $p) : ?>
               <tr>
                 <th scope="row"><?= $no++; ?></th>
@@ -89,7 +89,8 @@
             <?php endforeach; ?>
           </tbody>
         </table>
-        <?= $pager->links('pasien', 'pasien_pagination'); ?>
+        <!-- method links berpawameter 2 yaitu nama_table, nama_variabel_template_pagination=>|yang ada di config pager variabel template| -->
+        <?= $pager->links('pasien', 'pagination'); ?>
       </div>
     </div>
   </div>

@@ -6,9 +6,9 @@ use CodeIgniter\Model;
 
 class PasienModel extends Model
 {
-  protected $table = 'pasien';
-  protected $primaryKey = 'Id_Pasien';
-  protected $allowedFields = ['Id_Pasien', 'Nama_Pasien', 'Gender', 'Alamat_Detail', 'Alamat_Kelurahan', 'Alamat_Kecamatan', 'Alamat_KotaKab', 'Tmp_Lahir', 'Tgl_Lahir'];
+  protected $table          = 'pasien';
+  protected $primaryKey     = 'Id_Pasien';
+  protected $allowedFields  = ['Id_Pasien', 'Nama_Pasien', 'Gender', 'Alamat_Detail', 'Alamat_Kelurahan', 'Alamat_Kecamatan', 'Alamat_KotaKab', 'Tmp_Lahir', 'Tgl_Lahir'];
 
 
   // proses pengambilan data dari database

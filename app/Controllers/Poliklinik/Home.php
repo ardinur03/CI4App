@@ -6,17 +6,21 @@ use App\Controllers\BaseController;
 
 class Home extends BaseController
 {
-  //tembak ke view poliklinik index
+
   public function index()
   {
 
     $data = [
-      'title' => 'Dashboard | Poliklinik',
+      'title'      => 'Poliklinik | Dashboard',
       'methodName' => '/dashboard',
-      'isi' => 'Poliklinik/v_home_Poliklinik',
-      'judul' => 'Tugas Crud DataBase Poliklinik'
+      // Key isi ini merupakan link menuju view v_home_Poliklinik
+      'isi'        => 'Poliklinik/v_home_Poliklinik',
+      // key judul ini merupakan judul di halaman 
+      'judul'      => ' '
     ];
-
+    /* 
+    * kemudian data akan di tembakkan ke v_wrapper yaitu sebagai template poliklinik pembungkus yang dinamis
+    */
     return view('layout/Poliklinik/v_wrapper', $data);
   }
 

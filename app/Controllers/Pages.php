@@ -6,6 +6,7 @@ namespace App\Controllers;
 class Pages extends BaseController
 {
 
+  //------------------HOME----------------------------------------------
   public function index()
   {
     $data = [
@@ -14,24 +15,28 @@ class Pages extends BaseController
     ];
     return view('pages/v_home', $data);
   }
-
   //--------------------------------------------------------------------
+
+  //-----------------CONTACT--------------------------------------------
+  public function contact()
+  {
+    $data = [
+      'title' => 'Contact',
+      'methodName' => '/contact'
+    ];
+    return view('pages/v_contact', $data);
+  }
+  //--------------------------------------------------------------------
+
+  //------------------ABOUT---------------------------------------------
   public function about()
   {
     $data = [
-      'title' => 'About', 
+      'title' => 'About',
       'methodName' => '/about'
     ];
     return view('pages/v_about', $data);
   }
   //--------------------------------------------------------------------
-
-  public function contact()
-  {
-    $data = [
-      'title' =>'Contact',
-      'methodName' => '/contact'];
-    return view('pages/v_contact', $data);
-  }
 
 }
