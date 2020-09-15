@@ -39,10 +39,16 @@ $routes->get('/', 'Pages::index');
 $routes->get('/about', 'Pages::about');
 $routes->get('/contact', 'Pages::contact');
 
-// page polikliknik
-$routes->get('/poliklinik', 'Poliklinik::index');
-$routes->get('/poliklinik/detail/(:segment)', 'Poliklinik::detail/$1');
-$routes->get('/poliklinik/update/(:segment)', 'Poliklinik::update/$1');
+//  polikliknik
+$routes->get('/poliklinik', 'Poliklinik\Home::index');
+//CRUD PASIEN
+$routes->get('/Poliklinik/Pasien/detail/(:segment)', 'Poliklinik\Pasien::detail/$1');
+$routes->get('/Poliklinik/Pasien/Update(:segment)', 'Poliklinik\Pasien::update/$1');
+//CRUD DOKTER
+$routes->get('/Poliklinik/Dokter/Update(:segment)', 'Poliklinik\Dokter::update/$1');
+//CRUD SPESIALIS
+$routes->get('/Poliklinik/Spesialis/Update(:segment)', 'Poliklinik\Spesialis::update/$1');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
