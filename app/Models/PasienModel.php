@@ -8,11 +8,11 @@ class PasienModel extends Model
 {
   protected $table = 'pasien';
   protected $primaryKey = 'Id_Pasien';
-  protected $allowedFields = ['Id_Pasien','Nama_Pasien','Gender','Alamat_Detail','Alamat_Kelurahan','Alamat_Kecamatan','Alamat_KotaKab','Tmp_Lahir','Tgl_Lahir'];
- 
-  
+  protected $allowedFields = ['Id_Pasien', 'Nama_Pasien', 'Gender', 'Alamat_Detail', 'Alamat_Kelurahan', 'Alamat_Kecamatan', 'Alamat_KotaKab', 'Tmp_Lahir', 'Tgl_Lahir'];
+
+
   // proses pengambilan data dari database
-  public function getPasien($Id_Pasien = false)  
+  public function getPasien($Id_Pasien = false)
   {
     if ($Id_Pasien == false) {
       return $this->findAll();
@@ -36,6 +36,10 @@ class PasienModel extends Model
   public function update_pasien($data, $id)
   {
     return $this->db->table($this->table)->update($data, ['Id_Pasien' => $id]);
-  }  
+  }
 
+  public function search($keyword)
+  {
+    return $this->table('pasien')->like('Nama_Pasien', $keyword);
+  }
 }
