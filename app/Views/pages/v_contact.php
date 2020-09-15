@@ -20,7 +20,7 @@
           <div><i class="fas fa-map-marker-alt"></i>Jalan Raya Contong No. 63</div>
           <div><i class="fas fa-envelope"></i>ardinurinsan03@gmail.com</div>
           <div><i class="fas fa-phone"></i>0895328885809</div>
-          <div><i class="fas fa-clock"></i><p id="jam"></p> : <p id="menit"></p> : <p id="detik"></p></div>
+          <!-- <div><i class="fas fa-clock"></i><p id="jam"></p> : <p id="menit"></p> : <p id="detik"></p></div> -->
         </div>
       </div>
       <div class="col-md-7">

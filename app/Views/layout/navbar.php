@@ -1,7 +1,7 @@
 <header id="navbar-section">
   <div class="fixed-top">
     <!-- // ($title != 'Contact') ? 'bg-tranparent' : 'bg-secondary'; animate__rubberBand -->
-    <nav class=" navbar navbar-expand-lg navbar-dark <?= ($methodName == '/poliklinik') ? 'bg-primary' : 'bg-tranparent';; ?> animate__animated animate__zoomIn animate__delay-1s" id="mainNav">
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-tranparent animate__animated animate__rubberBand" id="mainNav">
       <div class="container">
         <a class="navbar-brand abc" href="/">Muhamad Ardi Nur Insan</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,7 @@
             <li class="nav-item <?= ($methodName == '/contact') ? 'active present' : ''; ?>">
               <a class="nav-link js-scroll-trigger abc" href="/contact">Contact</a>
             </li>
-            <li class="nav-item <?= ($methodName == '/poliklinik') ? 'active' : ''; ?>">
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger abc" href="/poliklinik">Poliklinik</a>
             </li>
           </ul>

@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="<?= base_url('/assets/css/style.css'); ?>">
 
   <!-- my font -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,400;1,500&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:wght@400;600;800&family=Poppins:wght@400;900&display=swap" rel="stylesheet">
 
   <!-- css font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
