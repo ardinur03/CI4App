@@ -42,7 +42,7 @@
                   <td scope="row"><?= $no++; ?></td>
                   <td class="text-left"><?= $d['Nama_Dokter']; ?></td>
                   <td><?= $d['Gender']; ?></td>
-                  <td><?= $d['Spec']; ?></td>
+                  <td class="text-left"><?= $d['Spec']; ?></td>
                   <td><?= $d['Kontak']; ?></td>
                   <td>
                     <div class="btn-group">
