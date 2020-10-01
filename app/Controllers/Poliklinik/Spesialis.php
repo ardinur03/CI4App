@@ -108,8 +108,8 @@ class Spesialis extends BaseController
 
     //jika simpan berhasil maka.. 
     if ($simpan) {
-      // deklarasikan session flashdata dengan tipe success
-      session()->setFlashdata('success', 'Creates spesialis successfully');
+      // deklarasikan session flashdata dengan tipe message
+      session()->setFlashdata('message', 'Di tambahkan !!!');
       //redirect halaman ke poliklinik/spesialis
 
       return redirect()->to(base_url('poliklinik/spesialis'));
@@ -126,7 +126,7 @@ class Spesialis extends BaseController
     // Jika berhasil melakukan hapus
     if ($hapus) {
       // Deklarasikan session flashdata dengan tipe warning
-      session()->setFlashdata('warning', 'Deleted Spesialis successfully');
+      session()->setFlashdata('message', 'Di hapus !!!');
       // Redirect ke halaman Poliklinik/Spesialis
       return redirect()->to(base_url('Poliklinik/Spesialis'));
     }
@@ -182,8 +182,8 @@ class Spesialis extends BaseController
 
     //jika berhasil mengubah
     if ($ubah) {
-      // Deklarasikan session flashdata dengan tipe info
-      session()->setFlashdata('info', 'Updated spesialis successfully');
+      // Deklarasikan session flashdata dengan tipe message
+      session()->setFlashdata('message', 'Di ubah !!!');
       // Redirect ke halaman poliklinik/Spesialis
       return redirect()->to(base_url('Poliklinik/Spesialis'));
     }
