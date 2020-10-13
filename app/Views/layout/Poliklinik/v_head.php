@@ -22,8 +22,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?= base_url('assets/poliklinik/css/style.css') ?>">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
   <!-- my font -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:wght@400;600;800&family=Poppins:wght@400;900&display=swap" rel="stylesheet">
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini text-sm">
