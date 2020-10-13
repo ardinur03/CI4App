@@ -6,17 +6,18 @@
       <img src="<?= base_url(); ?>/assets/img/icon-img/ardi.jpg" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
-      <a href="#" class="d-block">Muhamad Ardi Nur Insan</a>
+      <a href="#" class="d-block"><?= session()->get('name'); ?> </a>
+      <span class="badge badge-success"><?= session()->get('level'); ?></span>
     </div>
   </div>
 
   <!-- Sidebar Menu -->
   <nav class="mt-2">
-    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
       <!-- Dashboard start -->
       <li class="nav-item has-treeview menu-close">
         <!-- 2 condition => condition and condition ? ' ' : ' ' -->
-        <a href="/Poliklinik" class="nav-link <?= ($methodName == '/dashboard') ? 'active' : ''; ?>">
+        <a href="/poliklinik" class="nav-link <?= ($methodName == '/dashboard') ? 'active' : ''; ?>">
           <i class="nav-icon fas fa-tachometer-alt"></i>
           <p>
             Dashboard
@@ -27,7 +28,7 @@
 
       <!-- Poliklinik start -->
       <li class="nav-item has-treeview <?= ($methodName == '/dashboard') ? 'menu-close' : 'menu-open'; ?>">
-        <a href="#" class="nav-link <?= ($methodName != '/poliklinik' and $methodName != '/spesialis' and $methodName != '/dokter' and $title != 'Create Pasien') ? '' : 'active'; ?>">
+        <a href="#" class="nav-link <?= ($methodName != '/poliklinik' and $methodName != '/spesialis' and $methodName != '/dokter' and $methodName != '/rekmed') ? '' : 'active'; ?>">
           <i class="nav-icon fas fa-clinic-medical"></i>
           <p>
             Poliklinik
@@ -36,20 +37,44 @@
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="/Poliklinik/Pasien" class="nav-link <?= ($methodName != '/poliklinik') ? '' : 'active'; ?>">
+            <a href="/poliklinik/pasien" class="nav-link <?= ($methodName != '/poliklinik') ? '' : 'active'; ?>">
               <i class="nav-icon fas fa-user-injured"></i>
               <p>Pasien</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/Poliklinik/Spesialis" class="nav-link <?= ($methodName == '/spesialis') ? 'active' : ''; ?>">
+            <a href="/poliklinik/spesialis" class="nav-link <?= ($methodName == '/spesialis') ? 'active' : ''; ?>">
               <i class="nav-icon fas fa-user-nurse"></i>
               <p>Spesialis</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/poliklinik/dokter" class="nav-link <?= ($methodName == '/dokter') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-user-md"></i>
+              <p>Dokter</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/poliklinik/rekmed" class="nav-link <?= ($methodName == '/rekmed') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>Rekam Medis</p>
             </a>
           </li>
         </ul>
       </li>
       <!-- Poliklinik end -->
+
+      <!-- logout start -->
+      <li class="nav-item has-treeview menu-close">
+        <!-- 2 condition => condition and condition ? ' ' : ' ' -->
+        <a href="/auth/logout" class="nav-link">
+          <i class="nav-icon fas fa-sign-out-alt"></i>
+          <p>
+            Logout
+          </p>
+        </a>
+      </li>
+      <!-- logout end -->
     </ul>
   </nav>
   <!-- /.sidebar-menu -->
