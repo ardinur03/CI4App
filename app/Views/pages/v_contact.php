@@ -30,7 +30,7 @@
             <input type="text" name="name" class="text-box" placeholder="Your Name" required>
             <input type="email" name="email" class="text-box" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <input type="submit" name="submit" class="send-btn" value="Send">
+            <button type="submit" name="submit" class="btn btn-primary btn-md"><i class="fas fa-paper-plane"></i> Send</button>
           </form>
         </div>
       </div>

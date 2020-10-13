@@ -49,16 +49,36 @@
 </section>
 <!-- Slider Image end -->
 
-<!--social buttons start-->
-<!-- <section id="Social-Media" class="d-none d-sm-block">
-  <div class="social  mt-5 mb-5">
-    <a href="#">Facebook <i class="fab fa-facebook"></i></a>
-    <a href="#">Youtube <i class="fab fa-youtube"></i></a>
-    <a href="#">Instagram <i class="fab fa-instagram"></i></a>
-    <a href="#">Twitter<i class="fab fa-twitter"></i></a>
+<section id="about-header">
+  <div class="container-fluid bg-dark">
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <figure>
+          <img src="<?= base_url('assets/img/icon-img/email.png'); ?>" width="30%" alt="Email Image Not Found">
+          <figcaption>Email : </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 text-center">
+        <figure>
+          <img src="<?= base_url('assets/img/icon-img/address.png'); ?>" width="30%" alt="Address Image Not Found">
+          <figcaption>Address</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 text-center">
+        <figure>
+          <img src="<?= base_url('assets/img/icon-img/contacts.png'); ?>" width="30%" alt="Contact Image Not Found">
+          <figcaption>Contact</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-3 text-center">
+        <figure>
+          <img src="<?= base_url('assets/img/icon-img/www.png'); ?>" width="30%" alt="Website Image Not Found">
+          <figcaption>Website</figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
-</section> -->
-<!--social buttons end-->
+</section>
 <?= $this->include('layout/footer'); ?>
 
 <?= $this->endsection(); ?>
