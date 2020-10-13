@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 /**
@@ -43,5 +44,4 @@ class BaseController extends Controller
 		// $this->session = \Config\Services::session();
 		session();
 	}
-
 }
