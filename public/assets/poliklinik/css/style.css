@@ -4,6 +4,14 @@ body {
   padding: 0px;
 }
 
+.main-sidebar .judul {
+  font-size: 25px;
+}
+
+.sidebar .info a {
+  margin-top: -10px;
+}
+
 
 /* Poliklinik CRUD */
 #table-section {
@@ -15,12 +23,11 @@ body {
 }
 
 #table-section .container thead {
-  background-color: #0f8fdd;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 #table-section .container tbody {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 #table-section .container .tombol {
@@ -34,4 +41,16 @@ body {
 
 #create-pasien .container {
   width: 500px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

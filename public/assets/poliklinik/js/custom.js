@@ -1,8 +1,15 @@
-$('#example').tooltip({
-  boundary: 'window'
-})
+// $('#example').tooltip({
+//   boundary: 'window'
+// });
 
 // tooltip
+
+$(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $('.example-popover').popover({
+    container: 'body'
+  })
 })
