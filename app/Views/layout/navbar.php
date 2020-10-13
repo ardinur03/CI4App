@@ -10,16 +10,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav p-1">
             <li class="nav-item <?= ($methodName == '/') ? 'active present' : ''; ?>">
-              <a class="nav-link js-scroll-trigger abc" href="/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link js-scroll-trigger abc" href="/">HOME <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item <?= ($methodName == '/about') ? 'active present' : ''; ?>">
-              <a class="nav-link js-scroll-trigger abc" href="/about">About</a>
+              <a class="nav-link js-scroll-trigger abc" href="/about">ABOUT</a>
             </li>
             <li class="nav-item <?= ($methodName == '/contact') ? 'active present' : ''; ?>">
-              <a class="nav-link js-scroll-trigger abc" href="/contact">Contact</a>
+              <a class="nav-link js-scroll-trigger abc" href="/contact">CONTACT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger abc" href="/poliklinik">Poliklinik</a>
+              <a class="nav-link btn btn-primary btn-sm text-white" style="border-radius: 10px;" href="/login"><i class="fas fa-sign-in-alt"></i> LOGIN</a>
             </li>
           </ul>
         </div>
