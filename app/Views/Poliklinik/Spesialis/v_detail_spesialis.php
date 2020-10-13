@@ -1,8 +1,6 @@
 <section id="detail-spesialis">
   <div class="container">
-
     <div class="row">
-
       <div class="col-md-8">
         <div class="card text-center">
           <div class="card-header bg-primary mb-2">
@@ -29,8 +27,6 @@
           </div>
         </div>
       </div>
-
     </div>
-
   </div>
 </section>
