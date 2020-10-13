@@ -39,7 +39,7 @@ class Pasien extends BaseController
       // 'pasien' => $this->poliklinik->getPasien() <= karena menggunakan pagination jadi tidak perlu lagi getPasien
       'pasien' => $pasien->paginate(5, 'pasien'), //paginate(); akanotomatis get data pasien 
       'pager'  => $this->poliklinik->pager,
-      'currentPage' => $curretPage,
+      'currentPage' =>  $curretPage,
       // Key isi => ini nilai yg isinya link menuju view v_index_spesialis
       'isi'   => 'Poliklinik/Pasien/v_index_pasien',
       'judul' => 'Tabel Pasien'
@@ -83,9 +83,9 @@ class Pasien extends BaseController
     // Jika berhasil melakukan hapus
     if ($hapus) {
       // Deklarasikan session flashdata dengan tipe warning
-      session()->setFlashdata('warning', 'Deleted Pasien successfully');
+      session()->setFlashdata('message_success', 'Hapus data pasien berhasil !!!');
       // Redirect ke halaman Poliklinik/Pasien
-      return redirect()->to(base_url('Poliklinik/Pasien'));
+      return redirect()->to(base_url('poliklinik/pasien'));
     }
   }
   //--------------------------------------------------------------------------
@@ -172,7 +172,7 @@ class Pasien extends BaseController
       ]
     ])) {
       $validasi = \Config\Services::validation();
-      return redirect()->to('/Poliklinik/Pasien/Create')->withInput()->with('validation', $validasi);
+      return redirect()->to('/poliklinik/pasien/create')->withInput()->with('validation', $validasi);
     }
 
     // Mengambil value dari form dengan method POST
@@ -208,9 +208,9 @@ class Pasien extends BaseController
     // Jika simpan berhasil, maka ...
     if ($simpan) {
       // Deklarasikan session flashdata dengan tipe success
-      session()->setFlashdata('success', 'Created pasien successfully');
+      session()->setFlashdata('message_success', 'Tambah data pasien berhasil !!!');
       // Redirect halaman ke pasien
-      return redirect()->to(base_url('Poliklinik/Pasien'));
+      return redirect()->to(base_url('poliklinik/pasien'));
     }
   }
   //--------------------------------------------------------------------
@@ -230,6 +230,10 @@ class Pasien extends BaseController
       'isi' => 'Poliklinik/Pasien/v_update_pasien',
       'judul' => 'Edit Data Pasien'
     ];
+    // jika request tidak ada di databse
+    if (empty($data['pasien'])) {
+      throw new \CodeIgniter\Exceptions\PageNotFoundException('Id Pasien ' . $id . ' tidak di temukan.');
+    }
     /* 
     * kemudian data akan di tembakkan ke view v_wrapper yaitu sebagai template poliklinik pembungkus yang dinamis
     */
@@ -298,7 +302,7 @@ class Pasien extends BaseController
       ]
     ])) {
       $validasi = \Config\Services::validation();
-      return redirect()->to('/Poliklinik/Pasien/update/' . $this->request->getVar('Id_Pasien'))->withInput()->with('validation', $validasi);
+      return redirect()->to('/poliklinik/pasien/update/' . $this->request->getVar('Id_Pasien'))->withInput()->with('validation', $validasi);
     }
 
     // Mengambil value dari form dengan method POST
@@ -334,9 +338,9 @@ class Pasien extends BaseController
     // Jika berhasil melakukan ubah
     if ($ubah) {
       // Deklarasikan session flashdata dengan tipe info
-      session()->setFlashdata('info', 'Updated pasien successfully');
+      session()->setFlashdata('message_info', 'Edit data pasien berhasil !!!');
       // Redirect ke halaman poliklinik/Pasien
-      return redirect()->to(base_url('Poliklinik/Pasien'));
+      return redirect()->to(base_url('poliklinik/pasien'));
     }
   }
   //--------------------------------------------------------------------------

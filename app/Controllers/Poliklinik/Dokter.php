@@ -13,15 +13,30 @@ class Dokter extends BaseController
   {
     $this->dokterModel = new DokterModel;
     $this->spesialisModel = new SpesialisModel;
+    helper('form');
   }
 
   public function index()
   {
+    // operasi ternari if untuk halaman pagination
+    $curretPage = $this->request->getVar('page_dokter') ?  $this->request->getVar('page_dokter') : 1;
+
+    // logika if untuk form search
+    $keyword = $this->request->getPost('keyword');
+    if ($keyword) {
+      $dokter = $this->dokterModel->search($keyword);
+    } else {
+      $dokter = $this->dokterModel;
+    }
+
     $data = [
       'title'      => 'Poliklinik | Dokter',
       'methodName' => '/dokter',
-      'dokter'     => $this->dokterModel->getDokter(),
+      'dokter'     => $dokter->join('spesialis', 'spesialis.Id_Spec=dokter.Id_Spec')->paginate(5, 'dokter'),
+      // 'dokter' => $this->dokterModel->getDokter(),
       'judul'      => 'Tabel Dokter',
+      'pager'  => $this->dokterModel->pager,
+      'currentPage' =>  $curretPage,
       'isi'        => 'Poliklinik/Dokter/v_index_dokter'
     ];
 
@@ -34,7 +49,7 @@ class Dokter extends BaseController
       'title'      => 'Detail Dokter',
       'methodName' => '/dokter',
       'dokter'     => $this->dokterModel->getDokter($Id_Dokter),
-      'spesialis'     => $this->spesialisModel->getSpesialis($Id_Dokter),
+      'spesialis'  => $this->spesialisModel->getSpesialis($Id_Dokter),
       'isi'        => 'Poliklinik/Dokter/v_detail_dokter',
       'judul'      => 'Detail Dokter'
     ];
@@ -56,7 +71,7 @@ class Dokter extends BaseController
       // Deklarasikan session flashdata dengan tipe warning
       session()->setFlashdata('message', 'Dihapus !!!');
       // Redirect ke halaman product
-      return redirect()->to(base_url('Poliklinik/Dokter'));
+      return redirect()->to(base_url('poliklinik/dokter'));
     }
   }
 
@@ -96,7 +111,7 @@ class Dokter extends BaseController
 
     if ($simpan) {
       session()->setFlashdata('message', 'Ditambahkan !!!');
-      return redirect()->to(base_url('/Poliklinik/Dokter'));
+      return redirect()->to(base_url('/poliklinik/dokter'));
     }
   }
 
@@ -136,7 +151,7 @@ class Dokter extends BaseController
 
     if ($ubah) {
       session()->setFlashdata('message', 'Diubah !!!');
-      return redirect()->to(base_url('/Poliklinik/Dokter'));
+      return redirect()->to(base_url('/poliklinik/dokter'));
     }
   }
 }

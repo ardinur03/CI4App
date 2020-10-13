@@ -47,7 +47,7 @@ class Spesialis extends BaseController
     /* 
     * kemudian data akan di tembakkan ke v_wrapper yaitu sebagai template poliklinik pembungkus yang dinamis
     */
-    return view('layout/Poliklinik/v_wrapper', $data);
+    return view('layout/poliklinik/v_wrapper', $data);
   }
   //--------------------------------------------------------------------------
 
@@ -90,7 +90,7 @@ class Spesialis extends BaseController
       ]
     ])) {
       $validasi = \Config\Services::validation();
-      return redirect()->to('/Poliklinik/Spesialis')->withInput()->with('validation', $validasi);
+      return redirect()->to('/poliklinik/spesialis')->withInput()->with('validation', $validasi);
     }
     //Mengambil data dari form
     $Id_Spec  = $this->request->getPost('Id_Spec');
@@ -109,7 +109,7 @@ class Spesialis extends BaseController
     //jika simpan berhasil maka.. 
     if ($simpan) {
       // deklarasikan session flashdata dengan tipe message
-      session()->setFlashdata('message', 'Di tambahkan !!!');
+      session()->setFlashdata('message_success', 'Data spesialis behasil di tambahkan !!!');
       //redirect halaman ke poliklinik/spesialis
 
       return redirect()->to(base_url('poliklinik/spesialis'));
@@ -126,9 +126,9 @@ class Spesialis extends BaseController
     // Jika berhasil melakukan hapus
     if ($hapus) {
       // Deklarasikan session flashdata dengan tipe warning
-      session()->setFlashdata('message', 'Di hapus !!!');
+      session()->setFlashdata('message_success', 'Data spesialis berhasisil di hapus !!!');
       // Redirect ke halaman Poliklinik/Spesialis
-      return redirect()->to(base_url('Poliklinik/Spesialis'));
+      return redirect()->to(base_url('poliklinik/spesialis'));
     }
   }
   //-------------------------------------------------------------------------
@@ -145,6 +145,10 @@ class Spesialis extends BaseController
       // Key isi => ini nilai yg isinya link menuju view v_create_spesialis
       'isi'         => 'Poliklinik/Spesialis/v_update_spesialis'
     ];
+    // jika request tidak ada di databse
+    if (empty($data['spesialis'])) {
+      throw new \CodeIgniter\Exceptions\PageNotFoundException('Kode Spesialis ' . $Id_Spec . ' tidak di temukan.');
+    }
     /* 
     * kemudian data akan di tembakkan ke v_wrapper yaitu sebagai template poliklinik pembungkus yang dinamis
     */
@@ -183,9 +187,9 @@ class Spesialis extends BaseController
     //jika berhasil mengubah
     if ($ubah) {
       // Deklarasikan session flashdata dengan tipe message
-      session()->setFlashdata('message', 'Di ubah !!!');
+      session()->setFlashdata('message_success', 'Di ubah !!!');
       // Redirect ke halaman poliklinik/Spesialis
-      return redirect()->to(base_url('Poliklinik/Spesialis'));
+      return redirect()->to(base_url('poliklinik/spesialis'));
     }
   }
   //-------------------------------------------------------------------------
