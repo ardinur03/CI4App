@@ -9,7 +9,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form role="form" action="<?= base_url('/Poliklinik/Dokter/Proses_update/' . $dokter['Id_Dokter']); ?>" method="POST">
+          <form role="form" action="<?= base_url('/poliklinik/dokter/proses_update/' . $dokter['Id_Dokter']); ?>" method="POST">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="row">
@@ -28,11 +28,8 @@
                   <div class="form-group">
                     <label for="kodeSpec">Kode Spec</label>
                     <select name="Id_Spec" id="kodeSpec" class="form-control">
-                      <option value="">No Selected</option>
-                      <?php foreach ($spesialis as $d) : ?>
-
-                        <option <?= ($d['Id_Spec'] != $d['Id_Spec'] ? 'selected' : '') ?> value="<?= $d['Id_Spec']; ?>"><?= $d['Id_Spec'];  ?> - <?= $d['Spec']; ?></option>
-
+                      <?php foreach ($spesialis as $s) : ?>
+                        <option <?= ($s['Id_Spec'] != $dokter['Id_Spec'] ? '' : 'selected') ?>><?= $s['Id_Spec'];  ?> - <?= $s['Spec']; ?></option>
                       <?php endforeach; ?>
 
                     </select>
@@ -57,8 +54,8 @@
                         <div class="input-group-text">+62</div>
                       </div>
                       <input type="number" name="Kontak" class="form-control" id="noHp" placeholder="No Hp" min="0" value="<?= $dokter['Kontak']; ?>">
-                      <small class="text-red">*Tuliskan Awalan no hp dengan 0</small>
                     </div>
+                    <small class="text-red">*Tuliskan Awalan no hp dengan 0</small>
                   </div>
                 </div>
               </div>
@@ -70,7 +67,7 @@
               <div class="container">
                 <div class="row  justify-content-end">
                   <div class="form-group">
-                    <a href="/Poliklinik/Dokter" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
+                    <a href="/poliklinik/dokter" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
                     <button type="reset" class="btn btn-warning text-white btn-sm"><i class="fas fa-redo-alt"></i> Reset</button>
                     <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-save"></i> Save</button>
                   </div>
