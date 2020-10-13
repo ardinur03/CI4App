@@ -1,7 +1,7 @@
-<section id="create-pasien">
-  <div class="container bg-light">
-    <div class="row">
-      <div class="col-12">
+<section id="update-pasien">
+  <div class="container">
+    <div class="row justify-content-center bg-light">
+      <div class="col-6">
         <form action="<?php echo base_url('/Poliklinik/Pasien/Proses_update/' . $pasien['Id_Pasien']); ?>" method="POST">
           <?= csrf_field(); ?>
           <div class="form-group">
@@ -71,7 +71,7 @@
             </div>
           </div>
           <div class="form-group">
-            <a href="/Poliklinik/Pasien" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
+            <a href="/poliklinik/pasien" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
             <button type="reset" class="btn btn-warning btn-sm text-white"><i class="fas fa-redo-alt"></i> Reset Data</button>
             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
           </div>

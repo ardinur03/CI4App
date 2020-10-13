@@ -1,4 +1,4 @@
-<section id="detail-spesialis">
+<section id="detail-pasien">
   <div class="container">
     <div class="card text-center">
       <div class="card-header bg-primary mb-2">
@@ -53,7 +53,7 @@
             </table>
           </div>
           <div class="col-12 mt-3">
-            <a href="/Poliklinik/Pasien" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
+            <a href="/poliklinik/pasien" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
           </div>
         </div>
       </div>

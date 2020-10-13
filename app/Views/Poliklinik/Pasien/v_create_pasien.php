@@ -68,7 +68,7 @@
           </div>
         </div>
         <div class="form-group">
-          <a href="/Poliklinik/Pasien" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
+          <a href="/poliklinik/pasien" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-circle-left"></i> Back</a>
           <button type="reset" class="btn btn-warning btn-sm text-white"><i class="fas fa-redo-alt"></i> Reset Data</button>
 
           <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i> Save</button>
