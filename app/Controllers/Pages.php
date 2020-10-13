@@ -38,4 +38,24 @@ class Pages extends BaseController
   }
   //--------------------------------------------------------------------
 
+  //-----------------LOGIN----------------------------------------------
+  public function login()
+  {
+    $data = [
+      'title' => 'Login',
+      'isi'   => '/auth/v_login.php'
+    ];
+    return view('layout/Poliklinik/v_auth', $data);
+  }
+
+  //-----------------REGISTER----------------------------------------------
+  public function register()
+  {
+    $data = [
+      'title' => 'Register',
+      'isi'   => '/auth/v_register.php',
+      'validate' => \Config\Services::validation()
+    ];
+    return view('layout/Poliklinik/v_auth', $data);
+  }
 }
