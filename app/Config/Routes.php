@@ -37,18 +37,44 @@ $routes->get('/', 'Pages::index');
 //pages 
 // $routes->get('/pages', 'pages::index');
 $routes->get('/about', 'Pages::about');
+
 $routes->get('/contact', 'Pages::contact');
 
-//  polikliknik
-$routes->get('/poliklinik', 'Poliklinik\Home::index');
+$routes->group('poliklinik', ['filter' => 'auth'], function ($routes) {
+	//  polikliknik
+	$routes->get('/poliklinik', 'Poliklinik\Home::index');
+	//CRUD PASIEN
+	$routes->add('pasien', 'Poliklinik\Pasien::index');
+	$routes->add('pasien/create', 'Poliklinik\Pasien::create');
+	$routes->get('pasien/update/(:segment)', 'Poliklinik\Pasien::update/$1');
+	$routes->get('pasien/detail/(:segment)', 'Poliklinik\Pasien::detail/$1');
 
-//CRUD PASIEN
-$routes->get('/Poliklinik/Pasien/detail/(:segment)', 'Poliklinik\Pasien::detail/$1');
-$routes->get('/Poliklinik/Pasien/Update(:segment)', 'Poliklinik\Pasien::update/$1');
+	//CRUD SPESIALIS
+	$routes->add('spesialis', 'Poliklinik\Spesialis::index');
+	$routes->get('spesialis/detail/(:segment)', 'Poliklinik\Spesialis::detail/$1');
+	$routes->get('spesialis/update/(:segment)', 'Poliklinik\Spesialis::update/$1');
 
-//CRUD SPESIALIS
-$routes->get('/Poliklinik/Spesialis/Detail/(:segment)', 'Poliklinik\Spesialis::detail/$1');
-$routes->get('/Poliklinik/Spesialis/Update(:segment)', 'Poliklinik\Spesialis::update/$1');
+	//CRUD DOKTER
+	$routes->add('dokter', 'Poliklinik\Dokter::index');
+	$routes->add('dokter/create', 'Poliklinik\Dokter::create');
+	$routes->get('dokter/detail/(:segment)', 'Poliklinik\Dokter::detail/$1');
+	$routes->get('dokter/update/(:segment)', 'Poliklinik\Dokter::update/$1');
+});
+
+//CRUD DOKTER
+//Authentication Login & Register
+$routes->get('/login', 'Pages::login');
+$routes->get('/registrasi', 'Pages::register');
+
+
+/**
+ * (:any) digunakan untuk menangkap seluruh jenis inputan
+ * (:segment) digunakan untuk menangkap seluruh jenis inputan kecuali forward slash (/)
+ * (:num) digunakan untuk menangkap angka
+ * (:alpha) digunakan untuk menangkap data berupa huruf
+ * (:alphanum) digunakan untuk menangkap data berupa huruf dan angka
+ * (:hash) memiliki konsep yang sama dengna segment hanya saja.. ini lebih mudah digunakan jika ketika id pada routing menggunakan hash
+ */
 
 /**
  * --------------------------------------------------------------------
